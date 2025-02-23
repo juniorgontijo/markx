@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-02-23T17:37:38.750972" rpa="false" schemaversion="5">
+<suite id="s1" name="Markx-Robot" source="C:\Development\Study\papito\Qax\projects\markx-robot">
+<suite id="s1-s1" name="Tests" source="C:\Development\Study\papito\Qax\projects\markx-robot\tests">
+<suite id="s1-s1-s1" name="Login" source="C:\Development\Study\papito\Qax\projects\markx-robot\tests\login.robot">
+<test id="s1-s1-s1-t1" name="Deve Logar com sucesso" line="7">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Emulator</arg>
+<arg>udid=emulator-5554</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>app=${EXECDIR}/apps/markx.apk</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-02-23T17:37:38.926817" elapsed="9.783506"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-23T17:37:58.711270" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-23T17:37:48.710657" elapsed="10.000957"/>
+</kw>
+<status status="PASS" start="2025-02-23T17:37:38.926022" elapsed="19.785957"/>
+</test>
+<doc>Testes de login</doc>
+<status status="PASS" start="2025-02-23T17:37:38.803891" elapsed="19.908707"/>
+</suite>
+<status status="PASS" start="2025-02-23T17:37:38.802733" elapsed="19.910861"/>
+</suite>
+<status status="PASS" start="2025-02-23T17:37:38.790515" elapsed="19.923814"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Markx-Robot" id="s1" pass="1" fail="0" skip="0">Markx-Robot</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Markx-Robot.Tests</stat>
+<stat name="Login" id="s1-s1-s1" pass="1" fail="0" skip="0">Markx-Robot.Tests.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
