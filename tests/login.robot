@@ -3,15 +3,11 @@ Documentation     Testes de login
 
 Resource          ../resources/base.resource
 
+Test Setup       Start session
+Test Teardown    Finish session
 *** Test Cases ***
 Deve Logar com sucesso
 
-    Open Application    http://localhost:4723
-    ...        automationName=UiAutomator2
-    ...        platformName=Android
-    ...        deviceName=Emulator
-    ...        udid=emulator-5554
-    ...        autoGrantPermissions=true
-    ...        app=${EXECDIR}/apps/markx.apk
+    Do Login 
+    Wait Until Page Contains   Minhas tarefas    5
 
-    Sleep    10
