@@ -22,3 +22,12 @@ Should have task
     Wait Until Element Is Visible
     ...    xpath=//*[@resource-id="taskText"][@text="${task_name}"]
     ...    5
+
+Remove Task by name
+    [Arguments]    ${task_name}
+
+    Click Element    xpath=//*[@text="${task_name}"]/../..//*[@resource-id="removeTask"]
+    
+    ${button}    Set Variable    xpath=//android.widget.Button[@text="SIM"]
+    Wait Until Element Is Visible    ${button}    5
+    Click Element                    ${button} 
