@@ -1,104 +1,121 @@
-Yodapp Robot
-Automação de testes para o aplicativo Yodapp utilizando Robot Framework e Appium.
+Projeto de automação de testes mobile utilizando Robot Framework, Appium e integração com API Node.js para cadastro de tarefas no app MarkX.
 
-Pré-requisitos
-Certifique-se de ter os seguintes itens instalados:
+Sumário
 
-Python 3.8+
-Robot Framework
-Appium
+Descrição
+Instalação
+Uso
+Estrutura do Projeto
+Testes
+Contribuição
+Autores
+Licença
+Status do Projeto
 
-Node.js (necessário para o Appium)
-Emulador Android ou dispositivo físico configurado
 
+Descrição
+Este projeto automatiza testes de interface mobile para o aplicativo MarkX, focando no cadastro e validação de tarefas. Utiliza Robot Framework, Appium e uma API Node.js para manipulação dos dados de tarefas.
 
 Instalação
+Pré-requisitos:
+
+Node.js (para API)
+Python 3.11+
+Appium 2.x
+Android Emulator configurado
+
+Passos:
 
 
 Clone o repositório:
 
-git clone https://gitlab.com/helenobordignon/yodapp-robot.git
-cd yodapp-robot
+git clone https://gitlab.com/helenobordignon/qa-teste-automatizado-mobile-robot-app-markx.git
+cd qa-teste-automatizado-mobile-robot-app-markx
 
 
 
 
-Instale as dependências do Python:
+Instale as dependências da API (dentro da pasta api):
+
+cd api
+npm install
+
+
+
+
+Inicie a API:
+
+npm start
+
+
+
+
+Instale as dependências do Robot Framework:
 
 pip install -r requirements.txt
 
 
 
 
-Certifique-se de que o Appium Server está em execução:
+Inicie o Appium:
 
 appium
 
 
 
 
-Configure o emulador ou dispositivo Android com as permissões necessárias.
+Execute os testes:
+
+robot -d resultados testes/
 
 
+
+
+
+Uso
+Os testes estão na pasta tests/ e os resultados serão salvos na pasta results/. O arquivo de configuração do Appium está em config/appium_config.json.
 
 Estrutura do Projeto
 
-
-tests/: Contém os arquivos de teste em Robot Framework.
-
-resources/: Contém recursos reutilizáveis, como keywords customizadas.
-
-app/: Contém o APK do aplicativo Yodapp para testes.
-
-
-Executando os Testes
-Para executar os testes, use o seguinte comando:
-
-robot -d results tests/
-
+.
+├── api
+│   ├── node_modules
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
+├── resources
+│   └── screens
+├── results
+├── tests
+└── README.md
 
 
 
--d results: Define o diretório onde os relatórios e logs serão salvos.
+Testes
+Os testes são escritos em Robot Framework e estão localizados na pasta tests. Recursos como palavras-chave e variáveis estão em resources/screens.
 
-tests/: Diretório contendo os arquivos de teste.
+Contribuição
+Contribuições são bem-vindas! Por favor, siga estas etapas:
 
+Faça um fork deste repositório.
+Crie uma nova branch: git checkout -b minha-contribuicao
 
-Teste de Exemplo
-O teste click.robot realiza as seguintes ações:
+Faça suas alterações e commit: git commit -m 'Minha contribuição'
 
-Abre o aplicativo Yodapp.
-Aguarda a página inicial carregar.
-Realiza cliques em elementos específicos, como o menu hambúrguer e itens do menu.
+Envie para o repositório remoto: git push origin minha-contribuicao
 
-
-Contribuindo
-Contribuições são bem-vindas! Siga os passos abaixo:
-
-Faça um fork do repositório.
-Crie uma branch para sua feature ou correção de bug:
-
-git checkout -b minha-feature
+Abra um Pull Request
 
 
-
-Faça commit das suas alterações:
-
-git commit -m "Descrição da minha feature"
+Autores
 
 
+Heleno Bordignon - QA Automation - helenobordignon
 
-Envie para o repositório remoto:
-
-git push origin minha-feature
-
-
-
-Abra um Merge Request no GitLab.
 
 
 Licença
-Este projeto está licenciado sob a MIT License.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
 
-Contato
-Para dúvidas ou sugestões, entre em contato com helenobordignon.
+Status do Projeto
+O desenvolvimento deste projeto está ativo. Sinta-se à vontade para contribuir ou sugerir melhorias.
